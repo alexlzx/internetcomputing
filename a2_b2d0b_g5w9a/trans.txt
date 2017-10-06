@@ -1,0 +1,265 @@
+rm -f *.class
+rm -f DNSlookup.jar
+javac DNSlookup.java
+jar cvfe DNSlookup.jar DNSlookup *.class
+added manifest
+adding: DNSlookup.class(in = 3201) (out= 1896)(deflated 40%)
+adding: DNSResponse.class(in = 3982) (out= 2193)(deflated 44%)
+
+
+Test 1 -----------------------------------------------
+
+
+java -jar DNSlookup.jar 198.162.35.1  www.cs.ubc.ca
+STRUNTd408
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 2 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 www.cs.ubc.ca 
+STRUNT971d
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 3 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 prep.ai.mit.edu 
+STRUNT4dd3
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 4 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 www.stanford.edu
+STRUNT1c0
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 4
+	at java.lang.String.substring(String.java:1963)
+	at DNSlookup.main(DNSlookup.java:88)
+
+
+Test 5 ----------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 finance.google.ca
+STRUNT59da
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 6 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 groups.yahoo.com
+STRUNT9a6e
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 7 -----------------------------------------------
+
+
+java -jar DNSlookup.jar 198.162.35.1 www.cs.ubc.ca -6
+STRUNTd5b0
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 8 -----------------------------------------------
+
+
+java -jar DNSlookup.jar 199.7.83.42 www.cs.ubc.ca -6
+STRUNT68eb
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 9 -----------------------------------------------
+
+
+java -jar DNSlookup.jar 199.7.83.42 prep.ai.mit.edu -6
+STRUNTb484
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 10 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 finance.google.ca -6
+STRUNT183d
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 11 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 www.stanford.edu -6
+STRUNT6f34
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 12 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   172.16.2.2  timeout.cs.ubc.ca
+STRUNTa3d6
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 13 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 wee.cs.ubc.ca
+STRUNT39a5
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 14 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 wee.cs.ubc.ca -6
+STRUNT80
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 4
+	at java.lang.String.substring(String.java:1963)
+	at DNSlookup.main(DNSlookup.java:88)
+
+
+Test 15 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 loop1.csproject.org
+STRUNTf3c2
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 16 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 .ca
+STRUNTeb8
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: String index out of range: 4
+	at java.lang.String.substring(String.java:1963)
+	at DNSlookup.main(DNSlookup.java:88)
+
+
+Test 17 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 www.stanford.edu -t
+STRUNTa298
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 18 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 www.stanford.edu -t6
+STRUNT4dd4
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 19 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 finance.google.ca -t
+STRUNT4390
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 20 -----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 finance.google.ca -t6
+STRUNT84c5
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 21 RCODE = 5-----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 .ca -t
+STRUNT19b7
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0
+
+
+Test 22 SOA returned-----------------------------------------------
+
+
+java -jar DNSlookup.jar   199.7.83.42 ca
+STRUNT8dd6
+QUERY 1 0
+QUERY 2 0
+www.cs.ubc.ca -6   A 0.0.0.0
+java.net.SocketException: Socket closed
+null -4   A 0.0.0.0

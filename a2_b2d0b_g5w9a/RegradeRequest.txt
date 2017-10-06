@@ -1,0 +1,11 @@
+Using DNSInitialQuery.bin as an example lookup, we made all of our
+functions and extracted the right data (query ID, QR, AA, RCODE, all
+counts, QNAME etc.). This data was saved into variable as seen in
+DNSResponse.java. However, we could not successfully make a connection
+to a DNS resolver with the given argument to do an actual lookup, so
+nothing is printed when the program is run on a given lookup.  Our
+understanding of the DNS query-response protocol was sufficient to do
+most of the tasks in the assignment, but due to a time restraint we
+were not able to make the program presentable.  Based on that, we
+believe we deserve some part marks for extracting the fields from a
+given DNS response, which was the bulk of the assignment.
